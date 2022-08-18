@@ -79,6 +79,7 @@ public:
 		uintptr_t result = pointer & filter;
 		return result == 0x8000000000 || result == 0x10000000000;
 	}
+	
 	template <typename T>
 	T read(T src)
 	{
