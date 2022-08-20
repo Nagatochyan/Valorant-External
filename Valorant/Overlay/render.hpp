@@ -38,7 +38,8 @@ WPARAM main_loop();
 void render();
 
 void DefaultTheme() {
-
+//thanks https://www.unknowncheats.me/forum/members/4566270.html	
+	
 	ImGuiStyle& s = ImGui::GetStyle();
 
 	const ImColor accentCol = ImColor(255, 0, 0, 255);
