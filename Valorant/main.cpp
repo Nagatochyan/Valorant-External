@@ -63,7 +63,7 @@ int main()
 
 	std::thread(CacheGame).detach();
 
-	while (true) main_loop();
+	main_loop();
 
 	exit(0);
 }
