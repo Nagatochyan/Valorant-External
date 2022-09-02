@@ -180,7 +180,8 @@ auto set_window_target() -> void
 
 auto setup_window() -> void 
 {
-	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)set_window_target, 0, 0, 0);
+	HANDLE Windowthread = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)set_window_target, 0, 0, 0);
+	CloseHandle(Windowthread);
 	
 	WNDCLASSEXA wcex = {
 		sizeof(WNDCLASSEXA),
