@@ -103,7 +103,7 @@ auto init_wndparams(HWND hWnd) -> HRESULT
 	p_Params.BackBufferHeight = Height;
 	p_Params.EnableAutoDepthStencil = TRUE;
 	p_Params.AutoDepthStencilFormat = D3DFMT_D16;
-	p_Params.PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;
+	p_Params.PresentationInterval = D3DPRESENT_INTERVAL_DEFAULT;
 
 	if (FAILED(p_Object->CreateDeviceEx(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING, &p_Params, 0, &p_Device))) {
 		p_Object->Release();
