@@ -120,7 +120,7 @@ namespace UE4
 
 	auto GetWorld(uintptr_t Pointer) -> uintptr_t
 	{
-		std::uintptr_t uworld_addr = driver.readv<uintptr_t>(Pointer + 0x50);
+		std::uintptr_t uworld_addr = driver.readv<uintptr_t>(Pointer + 0x60);
 
 		unsigned long long uworld_offset;
 
