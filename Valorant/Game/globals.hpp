@@ -27,9 +27,9 @@ namespace offsets
         bIsDormant = 0x100,
         Health = 0x1b0,
         ComponentToWorld = 0x250,
-        BoneArray = 0x590,
+        BoneArray = 0x5C0,
         BoneArrayCache = BoneArray + 0x10,
-        BoneCount = 0x598;
+        BoneCount = 0x5C8;
 }
 
 namespace Settings
