@@ -13,7 +13,20 @@
 #include <string>
 
 #include "driver/driver.hpp"
+template <typename T>
+T read(const uintptr_t address)
+{
+    T buffer{ };
+    DriverCommunication::PhysicalRead(UDPID, address, (uint8_t)&buffer, sizeof(T), function_address);
+    return buffer;
+}
 
+
+template <typename T>
+void write(const uintptr_t address, T value)
+{
+    DriverCommunication::PhysicalWrite(UDPID, address, (uint8_t)&value, sizeof(T), function_address);
+}
 DWORD GetProcessID(const std::wstring processName)
 {
 	PROCESSENTRY32 processInfo;
